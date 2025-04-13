@@ -1,3 +1,9 @@
+/* Global Text Size Adjustments */
+body {
+  -webkit-text-size-adjust: 100%;  /* For older WebKit browsers */
+  text-size-adjust: 100%;          /* For modern browsers */
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +41,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Optional: Fix for text-align */
+th {
+  text-align: match-parent; /* For modern browsers */
+  text-align: -webkit-match-parent; /* For older WebKit browsers */
 }
