@@ -1,28 +1,20 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import HeroSection from '../components/HeroSection';
-import OffersSection from '../components/OffersSection';
-import TicketForm from '../components/TicketForm';
-import Lodging from './Lodging';
-import Camping from './Camping';
-import Contact from './Contact';
 
-
-const Home = () => {
-  // Log when the Home component is mounted
-  useEffect(() => {
-    console.log("Home component mounted");
-  }, []); // Empty dependency array to run only once when component mounts
-
-  return (
-    <div>
-      <HeroSection />
-      <OffersSection />
-      <TicketForm />
-      <Lodging />
-      <Camping />
-      <Contact />
+const Home = () => (
+  <div>
+    <HeroSection />
+    <div className="container text-center mt-5">
+      <h1>Welcome to the Beach Festival!</h1>
+      <p>Explore the vibrant experience with music, food, and fun by the sea.</p>
+      <div className="d-flex flex-wrap justify-content-center gap-3 mt-4">
+        <Link className="btn btn-primary" to="/login">Login</Link>
+        <Link className="btn btn-outline-secondary" to="/offers">Offers</Link>
+        <Link className="btn btn-success" to="/tickets">Book Tickets</Link>
+      </div>
     </div>
-  );
-};
+  </div>
+);
 
 export default Home;

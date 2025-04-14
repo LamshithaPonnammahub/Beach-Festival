@@ -1,49 +1,16 @@
-import React, { useState } from "react";
-import { Form, Button, Container } from "react-bootstrap";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`Logged in with email: ${email}`);
-  };
-
-  return (
-    <section id="Login" className="py-5">
-      <Container>
-        <h2 className="text-center mb-5 text-warning">Login to Your Account</h2>
-        <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3">
-            <Form.Label>Email Address</Form.Label>
-            <Form.Control
-              type="email"
-              placeholder="you@example.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </Form.Group>
-
-          <Form.Group className="mb-3">
-            <Form.Label>Password</Form.Label>
-            <Form.Control
-              type="password"
-              placeholder="Your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </Form.Group>
-
-          <Button variant="warning" type="submit" className="w-100">
-            Login
-          </Button>
-        </Form>
-      </Container>
-    </section>
-  );
-};
+const Login = () => (
+  <div className="container text-center mt-5">
+    <h2>Login</h2>
+    <form className="w-50 mx-auto mt-4">
+      <input type="email" placeholder="Email" className="form-control mb-3" />
+      <input type="password" placeholder="Password" className="form-control mb-3" />
+      <Link to="/tickets" className="btn btn-primary w-100">Submit</Link>
+    </form>
+    <Link to="/home" className="d-block mt-3">Back to Home</Link>
+  </div>
+);
 
 export default Login;

@@ -1,62 +1,35 @@
-import React, { useState } from "react";
-import { Form, Button, Container } from "react-bootstrap";
+// import React from 'react';
+// import { Link } from 'react-router-dom';
 
-const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+// const Contact = () => (
+//   <div className="container text-center mt-5">
+//     <h2>Contact Us</h2>
+//     <p>For any queries, reach us at contact@beachfest.com</p>
+//     <Link className="btn btn-outline-primary mt-3" to="/home">Back to Home</Link>
+//   </div>
+// );
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`Message sent from ${name}`);
-  };
+// export default Contact;
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-  return (
-    <section id="contact" className="py-5">
-      <Container>
-        <h2 className="text-center mb-5 text-warning">Contact Us</h2>
-        <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3">
-            <Form.Label>Name</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Enter your name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-            />
-          </Form.Group>
-
-          <Form.Group className="mb-3">
-            <Form.Label>Email Address</Form.Label>
-            <Form.Control
-              type="email"
-              placeholder="you@example.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </Form.Group>
-
-          <Form.Group className="mb-3">
-            <Form.Label>Message</Form.Label>
-            <Form.Control
-              as="textarea"
-              rows={4}
-              placeholder="Write your message here"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              required
-            />
-          </Form.Group>
-
-          <Button variant="warning" type="submit" className="w-100">
-            Send Message
-          </Button>
-        </Form>
-      </Container>
-    </section>
-  );
-};
+const Contact = () => (
+  <div className="container text-center mt-5">
+    <h2>Contact Us</h2>
+    <p>For any queries, reach us at:</p>
+    <p><strong>Email:</strong> contact@beachfest.com</p>
+    <p><strong>Phone:</strong> +123 456 7890</p>
+    <p><strong>Address:</strong> 123 Beach Street, Coastal City, Oceanview</p>
+    
+    <h4>Follow us on Social Media:</h4>
+    <div>
+      <a href="https://facebook.com/BeachFest" className="btn btn-outline-primary mx-2">Facebook</a>
+      <a href="https://twitter.com/BeachFest" className="btn btn-outline-primary mx-2">Twitter</a>
+      <a href="https://instagram.com/BeachFest" className="btn btn-outline-primary mx-2">Instagram</a>
+    </div>
+    
+    <Link className="btn btn-outline-primary mt-3" to="/home">Back to Home</Link>
+  </div>
+);
 
 export default Contact;

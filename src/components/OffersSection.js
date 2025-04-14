@@ -1,46 +1,43 @@
 import React from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 
-const OfferSection = () => {
+const OffersSection = () => {
   return (
-    <section className="offers py-5" id="offers">
-      <Container>
-        <h2 className="text-center mb-5 text-warning">Exclusive Offers</h2>
-        <Row>
-          <Col md={4}>
-            <Card className="shadow-lg">
-              <Card.Img variant="top" src="images/offer1.jpg" />
-              <Card.Body>
-                <Card.Title>Early Bird Discount</Card.Title>
-                <Card.Text>Get 20% off when you book early. Limited time only!</Card.Text>
-                <Button variant="warning">Book Now</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={4}>
-            <Card className="shadow-lg">
-              <Card.Img variant="top" src="images/offer2.jpg" />
-              <Card.Body>
-                <Card.Title>Group Discount</Card.Title>
-                <Card.Text>Bring 5+ friends and save 30% on all tickets!</Card.Text>
-                <Button variant="warning">Grab Offer</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={4}>
-            <Card className="shadow-lg">
-              <Card.Img variant="top" src="images/offer3.jpg" />
-              <Card.Body>
-                <Card.Title>VIP Weekend Pass</Card.Title>
-                <Card.Text>Upgrade to VIP for a luxury festival experience.</Card.Text>
-                <Button variant="warning">Book VIP</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-    </section>
+    <div className="container text-center mt-5">
+      <h2 className="mb-4">Special Offers</h2>
+      <div className="row">
+        <div className="col-md-4 mb-4">
+          <div className="card h-100">
+            <img src="https://via.placeholder.com/300x200" className="card-img-top" alt="Early Bird Offer" />
+            <div className="card-body">
+              <h5 className="card-title">Early Bird Discount</h5>
+              <p className="card-text">Get 20% off on early ticket bookings. Limited time offer!</p>
+              <button className="btn btn-primary">Grab Offer</button>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-4 mb-4">
+          <div className="card h-100">
+            <img src="https://via.placeholder.com/300x200" className="card-img-top" alt="Group Booking Offer" />
+            <div className="card-body">
+              <h5 className="card-title">Group Booking</h5>
+              <p className="card-text">Book 5 tickets and get 1 free! Best for groups.</p>
+              <button className="btn btn-primary">Grab Offer</button>
+            </div>
+          </div>
+        </div>
+        <div className="col-md-4 mb-4">
+          <div className="card h-100">
+            <img src="https://via.placeholder.com/300x200" className="card-img-top" alt="VIP Access Offer" />
+            <div className="card-body">
+              <h5 className="card-title">VIP Access</h5>
+              <p className="card-text">Enjoy exclusive lounge access and meet the artists!</p>
+              <button className="btn btn-primary">Grab Offer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
-}
+};
 
-export default OfferSection;
+export default OffersSection;
